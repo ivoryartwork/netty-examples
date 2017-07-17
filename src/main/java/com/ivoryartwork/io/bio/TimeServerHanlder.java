@@ -42,7 +42,7 @@ public class TimeServerHanlder implements Runnable {
             while (true) {
                 msg = reader.readLine();
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(60000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
