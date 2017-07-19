@@ -1,11 +1,11 @@
 package com.ivoryartwork.io.nio;
 
 /**
- * @author yaochao
+ * @author Yaochao
  * @version 1.0
- * @date 17-7-18
+ * @date 2017/7/19
  */
-public class TimeServer {
+public class TimeClient {
 
     public static void main(String[] args) {
         int port = 8888;
@@ -15,7 +15,7 @@ public class TimeServer {
             } catch (NumberFormatException e) {
             }
         }
-        MultiplexerTimeServer timeServer = new MultiplexerTimeServer(port);
-        new Thread(timeServer, "MultiplexerTimeServer-thread").start();
+        MultiplexerTimeClient timeClient = new MultiplexerTimeClient(port);
+        new Thread(timeClient, "MultiplexerTimeClient-thread").start();
     }
 }
